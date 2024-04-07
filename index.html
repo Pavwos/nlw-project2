@@ -3,25 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1/plugin/relativeTime.js"></script>
     <script>dayjs.extend(window.dayjs_plugin_relativeTime)</script>
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1/locale/pt-br.js"></script>
     <script>dayjs.locale('pt-br')</script>
-    <title>NLW-United</title>
+    <script type="text/javascript" src="./index.js" defer=""></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    <title>NLW-Unite</title>
 </head>
 <body>
-    <table width="100%">
-        <thead style="text-align: left">
-            <th>Nome do Usuário</th>
-            <th>Inscrição</th>
-            <th>CheckIn</th>
-        </thead>
-        <tbody>
-        </tbody>
-    </table>
+
+    <div class="container">
+        <header>
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="32" height="32" rx="7.11111" fill="#F48F56"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0682 15.0585V12.7587L5.71097 15.1201H5.69678V17.4821H5.71097L12.0682 19.8463V17.5416L8.80823 16.2976L12.0682 15.0585Z" fill="#00292E"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M19.6328 18.0618L22.89 16.8249L19.6328 15.588V13.2882L25.9829 15.6524H25.9998V18.0165H25.9829L19.6328 20.3687V18.0618ZM16.9057 10.031L13.1708 22.0167H15.387L19.1219 10.031H16.9057Z" fill="#00292E"/>
+            </svg>
+        </header>
+    
+        <form onsubmit="adicionarParticipante(event)">
+            <fieldset>
+                <legend>Inscrição</legend>
+                <div>
+                    <div class="input-wrapper">
+                        <input type="text" placeholder="Nome Completo" name="nome" id="nome" required>
+                    </div>
+                    <div class="input-wrapper">
+                        <input type="email" placeholder="email" name="email" id="email" required>
+                    </div>
+                    <button>REALIZAR INSCRIÇÃO</button>
+                </div>
+            </fieldset>
+        </form>
+    
+        <table width="100%">
+            <thead style="text-align: left">
+                <th>Nome do Usuário</th>
+                <th>Inscrição</th>
+                <th>CheckIn</th>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+
     <script src="main.js"></script>
 </body>
 </html>
